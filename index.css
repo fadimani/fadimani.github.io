@@ -1,0 +1,245 @@
+/* Never forget to link the css file with the html one: 
+<link href="cssFileName.css" rel="stylesheet"> ^-^ */
+/*you will find a lot of comments, don't let the green color scare u
+  it's here to help youuuuu ;) */
+body { /*put any common features in here, so that you don't have to repeat them over and over */
+    padding: 0 10%; /*top and botton: 0, left and right 10%, the middle then is 80%*/
+    padding-top: 25px; /*this overrides the 0 cus it came after it, u can do:
+                        padding: 25px 10% 0 10% instead (remember the clockwise rule),
+                        they're all valid, babe*/
+    font-family: serif; /*does baby know that serif fonts 3ndhom jnibat while sans-serif
+                                ma3ndhomch jnibat? hehehe, google it babyyy*/
+    color: white;
+}
+
+a {
+    text-decoration: none; /*to remove the pesky underline, links are underlined by default*/
+}
+
+li {
+    list-style-type: none; /*to remove those list dots, they suck you know*/
+}
+/*navigation bar*/
+
+nav ul li { /*we target li that's inside ul which is inside the nav, no need for > btw
+              juust a space is enough ;) */
+    margin: 0;
+    padding: 0;
+    padding-right: 5%;
+    display: inline; /*to have them in one line, the li element is a block element by default
+                       so they will take a line for each one, we set them to inline so that
+                       they become in one ROW
+                     */
+}
+
+nav ul li a{ /*we always target "a" to set the color and stuff*/
+    color: gray; 
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #f2745f;
+}
+
+#nom_boite{  
+    color: #46bae2;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+/*banner*/
+.banner {
+    background-image: url("img/banner-bg.jpg"); 
+    background-size: cover; /*remember your salondryas joke? yeees it's the same cover property*/
+    padding: 20% 5% 10% 5%;
+    text-align: center;
+}
+
+
+.banner .banner-content h6 {
+    font-size: 20px;
+}
+
+.banner .banner-content h2 {
+    font-size: 60px;
+}
+
+.banner ul li {
+    display: inline;
+    padding: 5px;
+} 
+
+.boutton_bleu, .boutton_orange { /*all the common propreties for both buttons are in one selector
+                                   this is so helpful to reduce the code.
+                                   don't forget: USE A COMMA TO TARGET MULTIPLE CLASSES, IDS OR ELEMENTS.
+                                   WITHOUT COMMA (just space like i did before for nav), IT WILL BE LIKE 
+                                   YOU'RE TARGETING AN ELEMENT THAT IS INSIDE ANOTHER ELEMENT; be careful, honey */
+    padding: 10px 10px;/*non-pro tip: always use padding instead of height and width for buttons*/
+    color: white;
+    font-size: 20px;
+}
+
+.boutton_bleu {
+    background-color: #46bae2;
+}
+
+.boutton_orange {
+    background-color: #f2745f;
+}
+
+/*intro*/
+
+.intro {
+    background-color: #46bae2;
+    text-align: center;
+    margin: 15px 0 15px;
+    padding: 45px;
+}
+
+.boutton_transparent {
+    color: white;
+    border: 1px solid white; /* the formulaaa iiiis border: width style color*/
+    text-transform: uppercase;
+    padding: 5px 15px;
+}
+
+/*services*/
+
+.icones {
+    width: 70px;
+    height: 70px;
+}
+
+.icones:hover {
+    transform: rotate(5deg); /*this is for animation, if u still have no idea 
+                                about it then don't sweat it babe, kat3ti fiha
+                                just one or 2 questions juuust skip it/them
+                                maghatraadch lbal hhhhhhh*/
+}
+
+#services { /*oh shit here we go again with flexiiboxiiiii*/
+    background-image: url("img/services-bg.jpg");
+    background-size: cover;
+    display: flex; /*the flex-direction is "row" by default so no need to add it, honey.
+                     if u need them in columns then set it to column*/
+    text-align: center;
+}
+
+#service1, #service2, #service3 {
+    padding: 20px 5px 20px;
+}
+
+#service1 {
+    background-color: rgba(242, 116, 95, 0.5);/*the 0.5 is for opacity, it takes 
+                                                  between 0 and 1, 0 is fully transparent 
+                                                  and 1 is opaque as hell hehe*/
+}
+
+#service2 {
+    background-color: rgba(54, 62, 80, 0.5);
+    margin: 0 5px 0;
+}
+
+#service3 {
+    background-color: rgba(70, 186, 226, 0.5); 
+}
+
+/*CRM*/
+
+#CRM {
+    background-color: rgb(54, 62, 80, 0.75);
+    width: 60%;
+    margin: 15px 20%;
+    padding: 15px;
+}
+
+#image-gauche {
+    background-color: #f2f2f2;
+    float: left; /*the image will be in the left and the text next to it, it won't take the
+                    whole line*/
+    padding: 5px;
+    margin: 10px;
+}
+
+/*formulaire*/
+
+#formulaire  {
+    color: black;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#formulaire form{
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#formulaire form input, textarea { /*so here we target the input that is inside
+                                     a form inside the div called "formulaire" aaaand the "textarea"
+                                     [(formulaire => form => input) + taxtarea]
+                                     cus they have common features, don't waste your precious time,
+                                     style both of em at once, babyyy*/
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #7a7a7a;
+    font-size: 15px;
+    padding-left: 10px;
+    border: none;
+    width: 100%;
+    height: 50px;
+    margin: 5px
+
+}
+
+#boutton_contact {
+    padding: 15px 15px; 
+    margin-top: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #46bae2;
+    color: white;
+    border: 0.5px solid #7a7a7a;
+}
+
+/*footer (hander hehehe)*/
+
+footer {
+    background-color: rgba(54, 62, 80, 0.75);
+    display: flex;
+    justify-content: space-between; /*this one can also take: center, flex-start, flex-end... 
+                                    (those are the most important, remember them, honhoney)*/
+    padding: 0 10px;
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+footer div {
+    padding: 0 15px;
+    margin: 15px 0;
+}
+
+footer ul {
+    margin: 0;
+}
+
+footer ul li a, .back-to-top a{ 
+    display: block;
+    color: white;
+    text-transform: uppercase;
+}
+
+footer ul li a:hover, .back-to-top a:hover { /*juust focus with me: bsmllah 
+                                              the hover state of footer=>ul=>li=>a 
+                                              + (which is the comma)
+                                              the hover state of the a inside the div
+                                              with the class ".back-to-top"*/
+    color: #f2745f;
+}
+
+/*it's 2:26 AM; just finished and thinking of my babyyyy*/
+/*3 AM; just finished revising it and adding some more comments hhhhh*/
+/*Best of luck, my baby. just focus and everything will be okay*/
+/*I love youuuuuuuu, you're DA BESTOOOOO*/
